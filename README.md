@@ -9,6 +9,7 @@ Inspired by:
   - Garry's Mod
   - Resonite
   - Source Engine
+  - Scrap Mechanic
 
 Some planned features:
   - Grid-based voxel and polygon system
