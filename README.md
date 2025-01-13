@@ -12,7 +12,7 @@ Inspired by:
 
 Some planned features:
   - Grid-based voxel and polygon system
-  - Complete in-game modding environment (programming + asset creation + file manipulation)
+  - In-game modding environment
   - Super easy multiplayer (I have no idea how to do this yet)
       - Crossplayable by default (I have no idea how to do this either)
   - Launcher
@@ -20,4 +20,4 @@ Some planned features:
       - Default game modes
       - Mod, Map, and Server explorer
 
-Note: The name is a work in progress and any listed features are subject to change
+Note: The name aswell as the game is a work in progress and any listed features are subject to change
