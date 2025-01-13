@@ -1,5 +1,5 @@
 # Anarchia
-Open source sandbox game and game engine
+Anarchia is an open source sandbox game
 
 Feel free to give me constructive feedback and suggestions on anything related to this game
 
@@ -20,4 +20,4 @@ Some planned features:
       - Default game modes
       - Mod, Map, and Server explorer
 
-Note: The name aswell as the game is a work in progress and any listed features are subject to change
+Note: Everything about Anarchia is a work in progress including the name and is subject to change
