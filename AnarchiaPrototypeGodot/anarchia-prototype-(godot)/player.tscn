@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://dikvw6tj6n1we"]
+
+[ext_resource type="Script" path="res://character_body_3d.gd" id="1_qr4wp"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_gwpfa"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_a7t6t"]
+
+[node name="Player" type="CharacterBody3D"]
+axis_lock_angular_x = true
+axis_lock_angular_z = true
+script = ExtResource("1_qr4wp")
+SENSITIVITY = 0.002
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_gwpfa")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_a7t6t")
+
+[node name="Head" type="Node3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="Head"]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0.525354, 0)
+fov = 91.0
