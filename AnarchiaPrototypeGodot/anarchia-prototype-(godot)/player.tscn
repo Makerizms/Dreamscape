@@ -26,3 +26,7 @@ shape = SubResource("CylinderShape3D_34el3")
 [node name="Camera3D" type="Camera3D" parent="Head"]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0.525354, 0)
 fov = 91.0
+
+[node name="RayCast3D" type="RayCast3D" parent="Head/Camera3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.000623703, -2.38419e-07, 0.0188179)
+target_position = Vector3(0, 7, 0)

@@ -1,0 +1,34 @@
+[gd_scene load_steps=2 format=3 uid="uid://beoxo6xb0ym14"]
+
+[ext_resource type="MeshLibrary" uid="uid://uvulpxl7ngp7" path="res://blocks.tres" id="1_kovvf"]
+
+[node name="VariableVoxels" type="Node3D"]
+
+[node name="BigVoxels" type="GridMap" parent="."]
+mesh_library = ExtResource("1_kovvf")
+cell_size = Vector3(1, 1, 1)
+data = {
+"cells": PackedInt32Array(65535, 65535, 2)
+}
+metadata/_editor_floor_ = Vector3(0, 0, 0)
+
+[node name="MediumVoxels" type="GridMap" parent="."]
+mesh_library = ExtResource("1_kovvf")
+cell_size = Vector3(0.5, 0.5, 0.5)
+cell_scale = 0.5
+data = {
+"cells": PackedInt32Array(65533, 0, 2, 2, 65534, 2, 2, 65535, 2, 3, 65534, 2, 3, 65535, 2, 65538, 65535, 2, 65538, 65534, 2, 65539, 65534, 4, 65539, 65535, 4, 5, 65534, 2, 5, 65535, 2, 6, 65534, 4, 6, 65535, 4, 65541, 65534, 4, 65541, 65535, 4, 8, 65534, 4, 8, 65535, 4)
+}
+metadata/_editor_floor_ = Vector3(0, 0, 0)
+
+[node name="SmallVoxels" type="GridMap" parent="."]
+mesh_library = ExtResource("1_kovvf")
+cell_size = Vector3(0.125, 0.125, 0.125)
+cell_scale = 0.125
+data = {
+"cells": PackedInt32Array(65523, 4, 2)
+}
+metadata/_editor_floor_ = Vector3(0, 0, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.707107, -0.5, 0.5, 0, 0.707107, 0.707107, -0.707107, -0.5, 0.5, 0, 1.53621, 0)
