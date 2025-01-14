@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://dikvw6tj6n1we"]
+[gd_scene load_steps=6 format=3 uid="uid://dikvw6tj6n1we"]
 
 [ext_resource type="Script" path="res://character_body_3d.gd" id="1_qr4wp"]
 
@@ -7,6 +7,15 @@
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_34el3"]
 height = 1.95
 radius = 0.4
+
+[sub_resource type="SphereMesh" id="SphereMesh_nt574"]
+radius = 0.05
+height = 0.1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_csknn"]
+top_radius = 0.0
+bottom_radius = 0.1
+height = 0.5
 
 [node name="Player" type="CharacterBody3D"]
 axis_lock_angular_x = true
@@ -30,3 +39,11 @@ fov = 91.0
 [node name="RayCast3D" type="RayCast3D" parent="Head/Camera3D"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.000623703, -2.38419e-07, 0.0188179)
 target_position = Vector3(0, 7, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Head/Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7.02806)
+mesh = SubResource("SphereMesh_nt574")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Head/Camera3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 1, 0)
+mesh = SubResource("CylinderMesh_csknn")

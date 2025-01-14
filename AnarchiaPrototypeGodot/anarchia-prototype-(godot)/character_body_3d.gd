@@ -10,7 +10,7 @@ var gravity = 26
 @onready var head = $Head
 @onready var camera = $Head/Camera3D
 
-@onready var rayCast = $Head/Camera3D/RayCast3D
+@onready var rayCast: RayCast3D = $Head/Camera3D/RayCast3D
 
 var blockIndex : int = 0
 
@@ -50,23 +50,15 @@ func _physics_process(delta: float) -> void:
 	# This is the voxel place and break system
 	if Input.is_action_just_pressed("LeftClick"):
 		if rayCast.is_colliding():
-			#print_debug("Method: ", rayCast.get_collider().has_method("destroy_block"))
-			#print_debug("Collider: ", rayCast.get_collider())
-			#print_debug("Collision Point: ", rayCast.get_collision_point())
-			#print_debug("Collision Normal: ", rayCast.get_collision_normal())
-			if rayCast.get_collider().has_method("destroy_block") :
+			if rayCast.get_collider().has_method("destroy_block"):
 				rayCast.get_collider().destroy_block(rayCast.get_collision_point() - rayCast.get_collision_normal())
 	if Input.is_action_just_pressed("RightClick"):
 		if rayCast.is_colliding():
-			#print_debug("Method: ", rayCast.get_collider().has_method("destroy_block"))
-			#print_debug("Collider: ", rayCast.get_collider())
-			#print_debug("Collision Point: ", rayCast.get_collision_point())
-			#print_debug("Collision Normal: ", rayCast.get_collision_normal())
-			if rayCast.get_collider().has_method("create_block") :
-				rayCast.get_collider().create_block(rayCast.get_collision_point() - rayCast.get_collision_normal(), blockIndex)
+			if rayCast.get_collider().has_method("create_block"):
+				rayCast.get_collider().create_block(rayCast.get_collision_point() + rayCast.get_collision_normal(), blockIndex)
 	if Input.is_action_just_pressed("MiddleClick"):
 		if rayCast.is_colliding():
-			print_debug("Index ", rayCast.get_index())
-			blockIndex = rayCast.get_index()
+			if rayCast.get_collider().has_method("get_block"):
+				blockIndex = rayCast.get_collider().get_block(rayCast.get_collision_point() - rayCast.get_collision_normal())
 
 	move_and_slide()
