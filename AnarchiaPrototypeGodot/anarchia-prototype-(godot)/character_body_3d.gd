@@ -52,21 +52,17 @@ func _physics_process(delta: float) -> void:
 		if rayCast.is_colliding():
 			if rayCast.get_collider().has_method("destroy_block"):
 				rayCast.get_collider().destroy_block(rayCast.get_collision_point() - rayCast.get_collision_normal().clamp(Vector3(0, 0, 0), Vector3(1, 1, 1)))
-				print_debug("Collision Point ", rayCast.get_collision_point())
-				print_debug("Collision Normal ", rayCast.get_collision_normal())
-				print_debug("Calculation ", rayCast.get_collision_point() - rayCast.get_collision_normal())
-				print_debug("Function ", rayCast.get_collider().destroy_block(rayCast.get_collision_point() - rayCast.get_collision_normal().clamp(Vector3(0, 0, 0), Vector3(1, 1, 1))))
 	if Input.is_action_just_pressed("RightClick"):
 		if rayCast.is_colliding():
 			if rayCast.get_collider().has_method("create_block"):
 				rayCast.get_collider().create_block(rayCast.get_collision_point() + rayCast.get_collision_normal().clamp(Vector3(-1, -1, -1), Vector3(0, 0, 0)), blockIndex)
-				print_debug("Collision Point ", rayCast.get_collision_point())
-				print_debug("Collision Normal", rayCast.get_collision_normal())
-				print_debug("Calculation ", rayCast.get_collision_point() + rayCast.get_collision_normal())
-				print_debug("Function ", rayCast.get_collider().create_block(rayCast.get_collision_point() + rayCast.get_collision_normal().clamp(Vector3(-1, -1, -1), Vector3(0, 0, 0)), blockIndex))
 	if Input.is_action_just_pressed("MiddleClick"):
 		if rayCast.is_colliding():
 			if rayCast.get_collider().has_method("get_block"):
-				blockIndex = rayCast.get_collider().get_block(rayCast.get_collision_point() - rayCast.get_collision_normal())
+				blockIndex = rayCast.get_collider().get_block(rayCast.get_collision_point() - rayCast.get_collision_normal().clamp(Vector3(0, 0, 0), Vector3(1, 1, 1)))
+	
+	# If you fall this will teleport you back
+	if $".".transform.origin.y <= -3:
+		$".".transform.origin = Vector3(0, 3, 0)
 
 	move_and_slide()

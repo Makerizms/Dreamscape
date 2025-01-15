@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://dikvw6tj6n1we"]
+[gd_scene load_steps=7 format=3 uid="uid://dikvw6tj6n1we"]
 
 [ext_resource type="Script" path="res://character_body_3d.gd" id="1_qr4wp"]
+[ext_resource type="Texture2D" uid="uid://bixyxbqqil1ed" path="res://Crosshair.png" id="2_7gr2b"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_gwpfa"]
 
@@ -47,3 +48,12 @@ mesh = SubResource("SphereMesh_nt574")
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="Head/Camera3D"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 1, 0)
 mesh = SubResource("CylinderMesh_csknn")
+
+[node name="TextureRect" type="TextureRect" parent="Head/Camera3D"]
+texture_filter = 1
+offset_left = 566.0
+offset_top = 314.0
+offset_right = 586.0
+offset_bottom = 334.0
+pivot_offset = Vector2(10, 10)
+texture = ExtResource("2_7gr2b")

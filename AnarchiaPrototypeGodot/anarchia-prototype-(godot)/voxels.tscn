@@ -14,7 +14,7 @@ script = ExtResource("2_wlkq6")
 metadata/_editor_floor_ = Vector3(0, 1, 0)
 
 [node name="Player" parent="." instance=ExtResource("2_y4wyp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.21246, 3.04513, 4.89238)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.165564, 0.986199, 0, -0.986199, 0.165564, 0, 7.37471, 0)
