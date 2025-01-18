@@ -1,5 +1,5 @@
-# Anarchia
-Anarchia is an open source sandbox game and engine
+# Dreamscape
+Dreamscape is an open source sandbox game and engine
 
 Feel free to give me constructive feedback and suggestions on anything related to this game
 
