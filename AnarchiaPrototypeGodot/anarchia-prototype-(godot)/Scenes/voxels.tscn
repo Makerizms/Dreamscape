@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://dekbqn7thjhk7"]
 
-[ext_resource type="MeshLibrary" uid="uid://uvulpxl7ngp7" path="res://blocks.tres" id="1_afjc3"]
-[ext_resource type="Script" path="res://voxels.gd" id="2_wlkq6"]
-[ext_resource type="PackedScene" uid="uid://dikvw6tj6n1we" path="res://player.tscn" id="2_y4wyp"]
+[ext_resource type="MeshLibrary" uid="uid://uvulpxl7ngp7" path="res://Assets/MeshLibraries/blocks.tres" id="1_afjc3"]
+[ext_resource type="Script" path="res://Scripts/voxels.gd" id="2_wlkq6"]
+[ext_resource type="PackedScene" uid="uid://dikvw6tj6n1we" path="res://Scenes/player.tscn" id="2_y4wyp"]
 
 [node name="GridMap" type="GridMap"]
 mesh_library = ExtResource("1_afjc3")

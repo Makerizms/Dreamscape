@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://dikvw6tj6n1we"]
 
-[ext_resource type="Script" path="res://character_body_3d.gd" id="1_qr4wp"]
-[ext_resource type="Texture2D" uid="uid://bixyxbqqil1ed" path="res://Crosshair.png" id="2_7gr2b"]
+[ext_resource type="Script" path="res://Scripts/character_body_3d.gd" id="1_qr4wp"]
+[ext_resource type="Texture2D" uid="uid://bixyxbqqil1ed" path="res://Assets/Images/Crosshair.png" id="2_7gr2b"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_gwpfa"]
 

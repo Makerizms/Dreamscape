@@ -1,0 +1,72 @@
+[gd_scene load_steps=9 format=3 uid="uid://wmj6tib8k81t"]
+
+[ext_resource type="Texture2D" uid="uid://c7n5rug613xb4" path="res://addons/kenney_prototype_textures/light/texture_07.png" id="1_4w471"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_nn101"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jrt3a"]
+albedo_color = Color(1, 0, 1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wit28"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7f3a3"]
+albedo_color = Color(0.678944, 0.678944, 0.678944, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e0uxw"]
+albedo_texture = ExtResource("1_4w471")
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0ojvo"]
+albedo_color = Color(1, 0, 1, 1)
+albedo_texture = ExtResource("1_4w471")
+uv1_triplanar = true
+
+[sub_resource type="PrismMesh" id="PrismMesh_g71po"]
+left_to_right = 0.0
+
+[node name="Blocks" type="Node3D"]
+
+[node name="Purple" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_nn101")
+surface_material_override/0 = SubResource("StandardMaterial3D_jrt3a")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Purple"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Purple/StaticBody3D"]
+shape = SubResource("BoxShape3D_wit28")
+
+[node name="Gray" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_nn101")
+surface_material_override/0 = SubResource("StandardMaterial3D_7f3a3")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Gray"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Gray/StaticBody3D"]
+shape = SubResource("BoxShape3D_wit28")
+
+[node name="DebugGray" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_nn101")
+surface_material_override/0 = SubResource("StandardMaterial3D_e0uxw")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="DebugGray"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DebugGray/StaticBody3D"]
+shape = SubResource("BoxShape3D_wit28")
+
+[node name="DebugPurple" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_nn101")
+surface_material_override/0 = SubResource("StandardMaterial3D_0ojvo")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="DebugPurple"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DebugPurple/StaticBody3D"]
+shape = SubResource("BoxShape3D_wit28")
+
+[node name="DebugGrayTri" type="MeshInstance3D" parent="."]
+mesh = SubResource("PrismMesh_g71po")
+surface_material_override/0 = SubResource("StandardMaterial3D_e0uxw")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="DebugGrayTri"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DebugGrayTri/StaticBody3D"]
+shape = SubResource("BoxShape3D_wit28")
