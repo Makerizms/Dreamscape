@@ -10,6 +10,7 @@ Inspired by:
   - Resonite
   - Source Engine
   - Scrap Mechanic
+  - Noita
 
 Some planned features:
   - Grid-based voxel and polygon system
