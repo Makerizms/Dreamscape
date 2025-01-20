@@ -8,7 +8,6 @@ Inspired by:
   - Godot Engine
   - Garry's Mod
   - Resonite
-  - Source Engine
   - Scrap Mechanic
   - Noita
 
