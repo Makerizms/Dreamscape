@@ -1,5 +1,5 @@
 # Dreamscape
-Dreamscape is an open source sandbox game and engine
+Dreamscape is game where you can experience the feeling of entering a dream and being able to create or destroy anything you want either by yourself or with other people
 
 Feel free to give me constructive feedback and suggestions on anything related to this game
 
@@ -8,17 +8,24 @@ Inspired by:
   - Godot Engine
   - Garry's Mod
   - Resonite
-  - Scrap Mechanic
-  - Noita
+  - Dreams (PS4)
 
-Some planned features:
-  - Grid-based voxel and polygon system
-  - In-game modding environment
-  - Super easy multiplayer (I have no idea how to do this yet)
-      - Crossplayable by default (I have no idea how to do this either)
-  - Launcher
-      - Singleplayer and Multiplayer world creator and saved worlds list
-      - Default game modes
-      - Mod, Map, and Server explorer
+Some possible base features:
+  - Elements
+    - 
+  - Connections
+  - Game wide "inventory" system linked to your account
+  - Search and discovery tools for finding assets, creations, players, etc.
+  - Association system linking all of the public creations by associations so you can find similar things to what you have
+  - Effortless no HUD user interface
+  - Effortless and cross platform multiplayer
 
-Note: Everything about Anarchia is a work in progress including the name and is subject to change
+Some possible features:
+  - Stress based destruction system
+  - Voxels/Grid based building system
+  - Polygon based asset creation and sculpting
+  - Shader creation
+  - 3d space based visual scripting language and logic that accounts for errors
+  - Music and sound creation tools
+
+Note: Everything here is a work in progress and subject to change
