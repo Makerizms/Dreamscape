@@ -12,12 +12,15 @@ Inspired by:
 
 Some possible base features:
   - Elements
-    - 
+    - Function kind of like folders and files, everything in the game is an element or a collection of elements called a compound element, whether it's a player, a world, a gun, a music file, a 3d model, etc.
   - Connections
+    - Used to connect elements and make compound elements
+    - There are different types of connections
+    - Connections determine how the elements within a compound element interact with each other and result in functionality 
   - Game wide "inventory" system linked to your account
   - Search and discovery tools for finding assets, creations, players, etc.
-  - Association system linking all of the public creations by associations so you can find similar things to what you have
-  - Effortless no HUD user interface
+  - Association system linking all of the public creations by creating a web of associations between different values of elements, for example if you have a gun you can then use the association system to search for other guns, bullets, attachments, or anything that is associated with guns conceptually
+  - No HUD or menus user interface
   - Effortless and cross platform multiplayer
 
 Some possible features:
